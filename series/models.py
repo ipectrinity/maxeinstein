@@ -6,17 +6,17 @@ from django.urls import reverse
 # Create your models here.
 class WebSeries(models.Model):
     class Meta:
-        verbose_name_plural = 'WebSeries' 
+        verbose_name_plural = 'WebSeries'
 
     title = models.CharField(max_length=100)
     visit_url = models.URLField(max_length=200, default="https://youtube.com/")
-    cover_image = models.OneToOneField("core.SeriesImage", on_delete=models.CASCADE, related_name='cover_image')
-    carousel_images = models.ForeignKey("core.SeriesImage", on_delete=models.CASCADE, related_name='carousel_images')
+    cover_image = models.ManyToManyField("core.SeriesImage", related_name='cover_image', blank=True)
+    carousel_images = models.ManyToManyField("core.SeriesImage", related_name='carousel_images', blank=True)
     no_of_episodes = models.IntegerField(default=1)
     episode_watchtime =  models.DurationField(default=timedelta(hours=1, minutes=0, seconds=0))
-    genre = models.CharField(max_length=50) 
+    genre = models.CharField(max_length=50)
     platform_name = models.CharField(max_length=50, default="YouTube", blank=True)
-    platform_url = models.URLField(max_length=200, default="https://youtube.com/", blank=True) 
+    platform_url = models.URLField(max_length=200, default="https://youtube.com/", blank=True)
     description = models.TextField(default="", blank=True)
     tags = models.ManyToManyField('series.Tag', related_name='series')
 
