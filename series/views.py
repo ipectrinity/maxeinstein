@@ -22,6 +22,6 @@ def tag_series(request, name):
 def genre_series(request, name):
     name = name.lower()
     title = name.upper()
-    series = WebSeries.objects.filter(genre__startswith=name)
+    series = WebSeries.objects.filter(genre__contains=name)
     return render(request, 'series/filtered_series_list.html',
                   {'series':series, 'title':title})

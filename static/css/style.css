@@ -357,13 +357,13 @@ a.navbar-brand{
     height: 80vh;
 }
 
-@media (max-width: 422px) {
+@media (max-width: 600px) {
     .carousel{
-        height: 50vh;
+        height: 45vh;
     }
 
     .carousel img{
-        height: 50vh;
+        height: 45vh;
     }
 }
 
@@ -418,15 +418,10 @@ a.navbar-brand{
 
 /*** Series ***/
 
-.series_grid{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
-}
 
 .latest_series_header{
     padding: 20px;
+    padding-bottom: 0px;
     font-weight: 800;
     font-size: xx-large;
 }
@@ -445,8 +440,6 @@ a.navbar-brand{
 }
 
 .card-title {
-  /*height: 24px;*/
-  /* text-align: center; */
   font: 24px/34px Gotham;
   letter-spacing: 0;
   color: #454545;
@@ -457,7 +450,8 @@ a.navbar-brand{
 .card-series{
   background: white;
   padding: 0;
-  margin: 10px;
+  margin-top: 10px;
+  height: 100%;
 }
 
 .card-series img{

@@ -1,27 +1,27 @@
 <div class="row">
     {% for s in series %}
                  
-        <div class="card-series col-sm-3 py-2 box-shadow">
-          <a href="{{s.get_absolute_url}}">
-          <img class="card-img-top" src="{{ s.cover_image.url }}" alt="{{s.title}}"></a>
-          <div class="card-body">
+        <div class="col-sm-4 mt-5">
+            <div class="card-series box-shadow">
             <a href="{{s.get_absolute_url}}">
-            <div class="card-title">
-                {{s.title}}
-            </div>  
-            </a>
-            <div class="card-subtext">
-                <a href="{{s.get_genre_url}}" class="">{{s.genre}}</a>
+            <img class="card-img-top" src="{{ s.cover_image.url }}" alt="{{s.title}}"></a>
+                <div class="card-body">
+                    <a href="{{s.get_absolute_url}}">
+                    <div class="card-title">
+                        {{s.title|truncatewords:"2"}}
+                    </div>  
+                    </a>
+                    <div class="card-subtext">
+                        <a href="{{s.get_genre_url}}" class="">{{s.genre}}</a>
+                    </div>
+                    <div class="card-text">
+                        {{s.description|truncatewords:"15"}}
+                    </div>
+                    <div class="card-subtext pb-3">
+                        {% include 'series/snippet_tag_labels.html' with tags=s.tags.all %}
+                    </div>
+                </div>
             </div>
-            <div class="card-text">
-                {{s.description|truncatewords:"30"}}
-            </div>
-        
-            <div class="card-subtext">
-                {% include 'series/snippet_tag_labels.html' with tags=s.tags.all %}
-            </div>
-            
-          </div>
-      </div>
+        </div>
     {% endfor %}
 </div>
