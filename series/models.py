@@ -10,7 +10,7 @@ class WebSeries(models.Model):
 
     title = models.CharField(max_length=100)
     visit_url = models.URLField(max_length=200, default="https://youtube.com/")
-    cover_image = models.ManyToManyField("core.SeriesImage", related_name='cover_image', blank=True)
+    cover_image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=None)
     carousel_images = models.ManyToManyField("core.SeriesImage", related_name='carousel_images', blank=True)
     no_of_episodes = models.IntegerField(default=1)
     episode_watchtime =  models.DurationField(default=timedelta(hours=1, minutes=0, seconds=0))
@@ -24,7 +24,7 @@ class WebSeries(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('series', args=[str(self.id)])
+        return reverse('series:series', args=[str(self.id)])
 
 
 class Tag(models.Model):
@@ -37,4 +37,4 @@ class Tag(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('tag_series', args=[str(self.name)])
+        return reverse('series:tag_series', args=[str(self.name)])

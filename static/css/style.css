@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: #151518;
     font-size: 16px;
     font-weight: 300;
     color: #888;
@@ -411,6 +412,152 @@ a.navbar-brand{
         display: inline-block;
     }
 }
+
+
+
+
+/*** Series ***/
+
+.series_grid{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.latest_series_header{
+    padding: 20px;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 73%;
+  }
+  .card-columns {
+    column-gap: 3rem;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  /*height: 24px;*/
+  /* text-align: center; */
+  font: 24px/34px Gotham;
+  letter-spacing: 0;
+  color: #454545;
+  opacity: 1;
+  margin-bottom: 0px;
+}
+
+.card-series{
+  background: white;
+  padding: 0;
+  margin: 10px;
+}
+
+.card-series img{
+  margin-top: -10px;
+  height: 55%;
+}
+
+.card-text {
+  /*height: 76px;*/
+  font: 16px/22px Gotham;
+  letter-spacing: 0;
+  color: #454545;
+  opacity: 1;
+}
+
+/* .card-subtext {
+  height: 12px;
+} 
+*/
+
+.card-subtext a {
+  font: 12px/26px Gotham;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #b5b5b5;
+  opacity: 1;
+}
+
+
+
+.card-author-bio {
+  text-align: left;
+  font: 18px/28px GothamBook;
+  letter-spacing: 0;
+  color: #434343;
+  opacity: 1;
+}
+.card-author-link {
+  text-align: left;
+  font: 16px/26px Gotham;
+  letter-spacing: 0;
+  color: #d98e8e;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.post-detail{
+  background: white;
+  padding: 20px;
+  border-radius: 8px 8px;
+}
+
+.jumbotron{
+  margin: -20px;
+  margin-bottom: 0px;
+}
+
+.post-subtitle {
+  font: 16px/26px Gotham;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #7e7e7e;
+  opacity: 1;
+}
+.post-title {
+  text-align: left;
+  font: 38px/34px Gotham;
+  letter-spacing: 0;
+  color: #2f2f2f;
+  opacity: 1;
+}
+
+.post-body {
+  text-align: left;
+  font: 24px/39px GothamBook;
+  letter-spacing: 0;
+  color: #434343;
+  opacity: 1;
+}
+
+.tags a {
+  border: 1px solid #ddd;
+  display: inline-block;
+  color: #717171;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(180, 180, 180, 0.1);
+  box-shadow: 0 1px 1px 0 rgba(180, 180, 180, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border-radius: 2px;
+  margin: 0 3px 6px 0;
+  padding: 5px 10px;
+}
+.tags a:hover {
+  border-color: #08c;
+}
+
 
 
 /***** Footer *****/

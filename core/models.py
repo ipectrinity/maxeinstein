@@ -1,10 +1,11 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.conf import settings
 
 # Create your models here.
 class SeriesImage(models.Model):
     series_name = models.CharField(max_length=50)
-    image_url = models.URLField(max_length=200)
+    image_url = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=None)
     
     def __str__(self) -> str:
         return f'{self.series_name}_series_image'

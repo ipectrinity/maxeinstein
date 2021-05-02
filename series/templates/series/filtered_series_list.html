@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="series_grid">
+    <h3> {{title}}</h3>
+    
+    {% include 'series/snippet_series_list.html' %}
+  </div>
+{% endblock %}
