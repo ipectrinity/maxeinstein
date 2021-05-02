@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -38,23 +39,26 @@
             </div>
 
             <ul class="list-unstyled menu-elements">
-                <li class="">
-                    <a href="{% url 'series:series_index' %}"><i class="fas fa-home"></i>All</a>
+                <li>
+                    <a href="/"><i class="fas fa-home"></i>Home</a>
                 </li>
                 <li>
-                    <a href="/web_series/genre/comedy"><i class="fas fa-cog"></i>Comedy</a>
+                    <a href="{% url 'series:series_index' %}"><i class="fas fa-envelope"></i>All</a>
                 </li>
                 <li>
-                    <a href="/web_series/genre/drama"><i class="fas fa-cog"></i>Drama</a>
+                    <a href="/web_series/genre/comedy"><i class="fas fa-theater-masks"></i>Comedy</a>
                 </li>
                 <li>
-                    <a href="/web_series/genre/horror"><i class="fas fa-user"></i>Horror</a>
+                    <a href="/web_series/genre/drama"><i class="fas fa-camera"></i>Drama</a>
                 </li>
                 <li>
-                    <a href="/web_series/genre/scifi"><i class="fas fa-pencil-alt"></i>Sci-Fi</a>
+                    <a href="/web_series/genre/horror"><i class="fas fa-book-dead"></i>Horror</a>
                 </li>
                 <li>
-                    <a  href="/web_series/genre/romance"><i class="fas fa-envelope"></i>Romance</a>
+                    <a href="/web_series/genre/scifi"><i class="fas fa-cog"></i>Sci-Fi</a>
+                </li>
+                <li>
+                    <a  href="/web_series/genre/romance"><i class="fas fa-heart"></i>Romance</a>
                 </li>
             </ul>
 
@@ -72,26 +76,19 @@
 
                     <!-- open sidebar menu -->
                     <button class="btn btn-dark bg-dark open-menu">
-                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-angle-double-right"></i>
                         <span></span>
                     </button>
 
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" style="font-family:'Original Surfer', cursive;" href="/">
                         <img src="{% static 'images/icon.png' %}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> WEBFLIX
                     </a>
 
                     
                     <div class="right-menu ml-auto">
-                        <span class="show-desktop">
-                            <a class="search_icon">
-                                <img src="{% static 'images/search-ico.svg' %}" alt="Search" />
-                            </a>
-                        </span>
                         <span class="signin_signup">
                             {% if user.is_authenticated%}
-                                <img src="{% static 'images/avatar.svg' %}" alt="Guest User" class="avatar show-desktop"/>
-
-                                <img src="{% static 'images/avatar.svg' %}" alt="Guest User" class="avatar show-mobile"/>
+                                <a href="{% url 'users:logout' %}"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Sign Out</a>
                             {% else %}
                                 <img src="{% static 'images/avatar.svg' %}" alt="Guest User" class="avatar show-desktop"/>
                                 <a href="{% url 'users:login' %}" class="show-desktop-flex ml-2">SIGN IN / SIGN UP </a>

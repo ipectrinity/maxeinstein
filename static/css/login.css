@@ -1,6 +1,6 @@
 body {
   font-family: "Karla", sans-serif;
-  background-color: #d0d0ce;
+  background: black;
 }
 
 .brand-wrapper {
@@ -13,24 +13,17 @@ body {
 }
 
 .brand-wrapper .text {
-  font-family: monospace !important;
-  font-weight: bolder !important;
+  font-family: 'Original Surfer', cursive !important;
+  font-weight: 900 !important;
   text-decoration: none !important;
-  color: #0d2366;
+  font-size: xx-large;
+  color: white;
   padding: 8px;
-  padding-left: 8rem;
+  margin-left: 4rem;
 }
 
 .brand-wrapper::after {
   clear: both;
-}
-
-.login-card {
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
-  overflow: hidden;
-  height: 92vh;
 }
 
 .login-card-img {
@@ -51,8 +44,8 @@ body {
 }
 .login-card-description {
   font-size: 25px;
-  color: #000;
-  font-weight: normal;
+  color: #fff;
+  font-weight:800;
   margin-bottom: 23px;
 }
 .login-card form {
@@ -119,3 +112,13 @@ body {
 }
 
 /*# sourceMappingURL=login.css.map */
+
+.login-card {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+  overflow: hidden;
+  height: 92vh;
+  background-color: #151518;
+  color: white!important;
+}

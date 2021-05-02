@@ -350,11 +350,11 @@ a.navbar-brand{
 }
 
 .carousel{
-    height: 80vh;
+    height: 70vh;
 }
 
 .carousel img{
-    height: 80vh;
+    height: 70vh;
 }
 
 @media (max-width: 600px) {
@@ -452,11 +452,13 @@ a.navbar-brand{
   padding: 0;
   margin-top: 10px;
   height: 100%;
+  background: transparent;
 }
 
 .card-series img{
   margin-top: -10px;
   height: 55%;
+  color: white;
 }
 
 .card-text {
