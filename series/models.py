@@ -23,6 +23,12 @@ class WebSeries(models.Model):
     def __str__(self) -> str:
         return self.title
 
+    def clean(self) -> None:
+        self.genre = str(self.genre).lower()
+
+    def get_genre_url(self):
+        return reverse('series:genre_series', args=[str(self.genre).lower()])
+
     def get_absolute_url(self):
         return reverse('series:series', args=[str(self.id)])
 

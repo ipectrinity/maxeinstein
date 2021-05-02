@@ -11,10 +11,17 @@ def series(request, id):
     series = get_object_or_404(WebSeries, pk=id)
     return render(request, 'series/series.html', {'object': series})
 
-def tag_posts(request, name):
+def tag_series(request, name):
     name = name.lower()
     title = 'Series about {}'.format(name)
     tag = get_object_or_404(Tag, name=name)
     series = WebSeries.objects.filter(tags=tag)
+    return render(request, 'series/filtered_series_list.html',
+                  {'series':series, 'title':title})
+
+def genre_series(request, name):
+    name = name.lower()
+    title = name.upper()
+    series = WebSeries.objects.filter(genre__startswith=name)
     return render(request, 'series/filtered_series_list.html',
                   {'series':series, 'title':title})
